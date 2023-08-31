@@ -1,0 +1,17 @@
+prebuild:
+  stage: .pre
+  script:
+    - ./gradlew compileSources
+      -PbuildToolsVersion="$BUILD_TOOLS_VERSION"
+      -PversionName="${VERSION_NAME}"
+      -PversionCode="${VERSION_CODE}"
+      --no-daemon
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .gradle
+      - build-cache
+    policy: push
+  dependencies: []
+  except:
+    - dev

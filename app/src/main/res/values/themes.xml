@@ -1,0 +1,59 @@
+<resources>
+
+    <style name="Theme.MemarLite"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorAccent">?attr/colorSecondary</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
+        <item name="android:datePickerDialogTheme">?attr/alertDialogTheme</item>
+        <item name="android:timePickerDialogTheme">?attr/alertDialogTheme</item>
+        <item name="dialogTheme">?attr/alertDialogTheme</item>
+        <item name="alertDialogTheme">@style/Theme.MemarLite.Dialog.Alert</item>
+        <item name="materialAlertDialogTheme">@style/Theme.MemarLite.Dialog</item>
+    </style>
+
+    <style name="Theme.MemarLite.Animation">
+        <item name="enterAnim">@android:anim/fade_in</item>
+        <item name="exitAnim">@android:anim/fade_out</item>
+        <item name="popEnterAnim">@android:anim/fade_in</item>
+        <item name="popExitAnim">@android:anim/fade_out</item>
+    </style>
+
+    <style name="Theme.MemarLite.Widget.Popup"
+        parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="Theme.MemarLite.Widget.AppBarLayout"
+        parent="ThemeOverlay.MaterialComponents.ActionBar" />
+
+
+    <style name="Theme.MemarLite.Dialog.Alert"
+        parent="Theme.MaterialComponents.DayNight.Dialog.Alert.Bridge">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorAccent">?attr/colorSecondary</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.MemarLite.Dialog"
+        parent="Theme.MaterialComponents.DayNight.Dialog.Bridge">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorAccent">?attr/colorSecondary</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+</resources>

@@ -1,0 +1,136 @@
+[versions]
+## common
+# constant
+compileSdk = "33"
+minSdk = "23"
+targetSdk = "33"
+jvmTarget = "11"
+kotlinJvmTarget = "11"
+# plugin
+androidGradle = "7.4.2"
+kotlin = "1.9.10"
+google-servises = "4.3.15"
+## jetpack
+# foundation
+jetpack-core = "1.10.1"
+jetpack-appcompat = "1.6.1"
+# arch
+jetpack-lifecycle = "2.6.1"
+live-event = "1.3.0"
+# ui
+jetpack-ktxActivity = "1.7.2"
+jetpack-ktxFragment = "1.6.1"
+# views
+jetpack-constraint = "2.1.4"
+jetpack-coordinator = "1.2.0"
+jetpack-recyclerView = "1.3.1"
+# navigation
+jetpack-navigation = "2.5.3"
+# views
+material = "1.9.0"
+
+## frameworks
+kotlin-coroutines = "1.7.3"
+# di
+hilt = "2.47"
+# utils
+timber = "5.0.1"
+leakcanary = "2.12"
+# firebase
+firebase-auth = "22.1.1"
+firebase-storage = "20.2.1"
+firebase-firestore = "24.7.1"
+# google-servises
+play-servises-auth = "20.6.0"
+# glide
+glide = "4.16.0"
+
+[libraries]
+# plugin
+androidGradle = { module = "com.android.tools.build:gradle", version.ref = "androidGradle" }
+hiltGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+navigation-safeargs = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "jetpack-navigation" }
+google-servises = { module = "com.google.gms:google-services", version.ref = "google-servises" }
+
+# kotlin
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+kotlin-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "kotlin-coroutines" }
+
+## jetpack
+# foundation
+jetpack-core = { module = "androidx.core:core-ktx", version.ref = "jetpack-core" }
+jetpack-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "jetpack-appcompat" }
+# arch
+jetpack-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "jetpack-lifecycle" }
+jetpack-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "jetpack-lifecycle" }
+jetpack-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "jetpack-lifecycle" }
+live-event = { module = "com.github.hadilq:live-event", version.ref = "live-event" }
+# di
+hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+# ui
+jetpack-ktxActivity = { module = "androidx.activity:activity-ktx", version.ref = "jetpack-ktxActivity" }
+jetpack-ktxFragment = { module = "androidx.fragment:fragment-ktx", version.ref = "jetpack-ktxFragment" }
+# views
+jetpack-constraint = { module = "androidx.constraintlayout:constraintlayout", version.ref = "jetpack-constraint" }
+jetpack-coordinator = { module = "androidx.coordinatorlayout:coordinatorlayout", version.ref = "jetpack-coordinator" }
+jetpack-recyclerView = { module = "androidx.recyclerview:recyclerview", version.ref = "jetpack-recyclerView" }
+# navigation
+jetpack-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "jetpack-navigation" }
+jetpack-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "jetpack-navigation" }
+# views
+material = { module = "com.google.android.material:material", version.ref = "material" }
+# utils
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+leakcanary = { module = "com.squareup.leakcanary:plumber-android", version.ref = "leakcanary" }
+leakcanaryDebug = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
+# firebase
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebase-auth" }
+firebase-storage = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebase-storage" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebase-firestore" }
+# google servises auth
+play-servises-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "play-servises-auth" }
+# glide
+glide-core = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+
+[bundles]
+
+# common
+kotlin = ["kotlin-stdlib", "kotlin-reflect"]
+
+# jetpack
+jetpack-foundation = ["jetpack-core", "jetpack-appcompat"]
+jetpack-arch = [
+    "jetpack-viewmodel",
+    "jetpack-livedata",
+    "jetpack-runtime",
+    "live-event"
+]
+jetpack-ui = ["jetpack-ktxActivity", "jetpack-ktxFragment"]
+
+# navigation
+navigation = ["jetpack-navigation-ui", "jetpack-navigation-fragment"]
+
+# di
+hilt = ["hilt"]
+hilt-annotation = ["hilt-compiler"]
+
+# ui
+views = [
+    "material",
+    "jetpack-constraint",
+    "jetpack-coordinator",
+    "jetpack-recyclerView"
+]
+
+# frameworks
+multithreading = ["kotlin-coroutines", "kotlin-coroutines-play-services"]
+firebase = [
+    "firebase-auth",
+    "firebase-storage",
+    "firebase-firestore",
+]

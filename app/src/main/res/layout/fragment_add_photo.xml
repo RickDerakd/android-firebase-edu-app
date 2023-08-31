@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addPhotoFragmentLayout"
+    style="@style/MatchParent"
+    tools:context="com.yasinskyi.firebase.edu.view.impl.fragment.home.AddPhotoFragment" >
+
+    <include
+        android:id="@+id/appBarLayout"
+        layout="@layout/toolbar_default" />
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="@dimen/medium_image_size"
+        android:layout_height="@dimen/medium_image_size"
+        android:layout_marginTop="@dimen/wide_margin"
+        android:backgroundTint="@color/grey_500"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/select_photo"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/ic_placeholder_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveImageButton"
+        style="@style/Wrap.Width0"
+        android:text="@string/save"
+        android:layout_marginStart="@dimen/extra_large_margin"
+        android:layout_marginEnd="@dimen/extra_large_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/selectedImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginActivityGraph"
+    app:startDestination="@id/authFragment">
+
+    <include app:graph="@navigation/activity_main" />
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.yasinskyi.firebase.edu.view.impl.fragment.login.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth">
+
+        <action
+            android:id="@+id/actionAuthFragmentToMainActivityGraph"
+            app:destination="@id/mainActivityGraph"
+            app:popUpTo="@+id/mainActivityGraph"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionAuthFragmentToRestorePasswordFragment"
+            app:destination="@id/restorePasswordFragment"
+            app:popUpTo="@+id/restorePasswordFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionAuthFragmentToRegistrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpTo="@+id/registrationFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/restorePasswordFragment"
+        android:name="com.yasinskyi.firebase.edu.view.impl.fragment.login.RestorePasswordFragment"
+        android:label="fragment_restore_password"
+        tools:layout="@layout/fragment_restore_password">
+
+        <action
+            android:id="@+id/actionRestorePasswordToAuthFragment"
+            app:destination="@id/authFragment"
+            app:popUpTo="@+id/authFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.yasinskyi.firebase.edu.view.impl.fragment.login.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+
+        <action
+            android:id="@+id/actionRegistrationFragmentToMainActivityGraph"
+            app:destination="@id/mainActivityGraph"
+            app:popUpTo="@+id/mainActivityGraph"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityGraph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yasinskyi.firebase.edu.view.impl.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/actionHomeFragmentToAuthFragment"
+            app:destination="@id/authFragment"
+            app:popUpTo="@+id/authFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionHomeFragmentToAddPhotoFragment"
+            app:destination="@id/addPhotoFragment"
+            app:popUpTo="@+id/addPhotoFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionHomeFragmentToPhotoFragment"
+            app:destination="@id/photoFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.yasinskyi.firebase.edu.view.impl.fragment.home.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" />
+
+    <fragment
+        android:id="@+id/addPhotoFragment"
+        android:name="com.yasinskyi.firebase.edu.view.impl.fragment.home.AddPhotoFragment"
+        android:label="fragment_add_photo"
+        tools:layout="@layout/fragment_add_photo">
+
+        <action
+            android:id="@+id/actionAddPhotoFragmentToHomeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionAddPhotoFragmentToAuthFragment"
+            app:destination="@id/authFragment"
+            app:popUpTo="@+id/authFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>

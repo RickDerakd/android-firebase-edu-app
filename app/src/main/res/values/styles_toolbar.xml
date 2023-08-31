@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Toolbar"
+        parent="Wide">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Toolbar.ScrollAlways">
+        <item name="layout_scrollFlags">scroll|enterAlways</item>
+    </style>
+
+    <style name="AppBarLayout"
+        parent="Wide">
+    </style>
+
+    <style name="AppBarLayout.CollapsingToolbarLayout">
+        <item name="android:layout_height">168dp</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="expandedTitleMarginStart">72dp</item>
+    </style>
+
+    <style name="AppBarLayout.CollapsingToolbarLayout.Scroll">
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed|snap</item>
+    </style>
+
+    <style name="TabLayout"
+        parent="Wide">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
+</resources>

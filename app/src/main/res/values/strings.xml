@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Memar</string>
+
+    <string name="unknown_error_message">Something strange happened :(</string>
+    <string name="no_internet_connection_message">There is no internet connection</string>
+    <string name="existed_user_message">User with this email already exist.</string>
+    <string name="unable_to_create_user_message">Unable to create this user</string>
+    <string name="non_authorized_message">Unable to authorize this user</string>
+    <string name="weak_password_message">You are using a weak password (less than 6 chars)</string>
+    <string name="invalid_credentials_message">Wrong email or password</string>
+    <string name="invalid_email_message">Invalid user email address. Try to enter again, please.</string>
+    <string name="invalid_user_message">Invalid user</string>
+    <string name="password_required_message">Password required</string>
+    <string name="password_registration_required_message">Password required</string>
+    <string name="email_required_message">Email required</string>
+    <string name="username_required_message">Username required</string>
+    <string name="username_registration_required_message">Username required. Example: User_name123 (min 5 symbols).</string>
+    <string name="image_required_message">Image required</string>
+    <string name="enter_email_to_restore_password_message">Enter email to restore password</string>
+    <string name="restore_password_request_send_message">a password recovery email has been sent to this address</string>
+    <string name="unable_to_send_password_reset_message">Unable to send password reset</string>
+    <string name="unable_to_upload_photo_to_storage_message">Unable to upload photo to storage</string>
+    <string name="empty_user_list_message">There is no users yet…</string>
+    <string name="invalid_photo_message">Something wrong with photo</string>
+    <string name="unable_to_load_user_list_message">"Unable to load user list"</string>
+    <string name="quit_confirmation_message">Are you sure you want to quit the app?</string>
+    <string name="username_input_helper_text">example: User_name123</string>
+    <string name="email_input_helper_text">example: example@email.com</string>
+
+    <string name="error_message_title">Oops!</string>
+    <string name="notice_message_title">Notice</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_up">Sign up</string>
+    <string name="verify_email">Verify</string>
+    <string name="reload">Reload</string>
+    <string name="login">Login</string>
+    <string name="save">Save</string>
+    <string name="restore">Restore</string>
+    <string name="retry">Retry</string>
+    <string name="set_photo">Set photo</string>
+    <string name="user">User</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="select_photo">Select photo</string>
+    <string name="not_registered_yet">Not registered yet?</string>
+    <string name="update_photo">Update photo</string>
+
+</resources>

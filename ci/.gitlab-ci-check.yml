@@ -1,0 +1,25 @@
+lint:
+  stage: check
+  script:
+    - ./gradlew lint
+      -PbuildToolsVersion="$BUILD_TOOLS_VERSION"
+      -PversionName="${VERSION_NAME}"
+      -PversionCode="${VERSION_CODE}"
+      --no-daemon
+  except:
+    - master
+    - dev
+  dependencies: []
+
+test:
+  stage: check
+  script:
+    - ./gradlew test
+      -PbuildToolsVersion="$BUILD_TOOLS_VERSION"
+      -PversionName="${VERSION_NAME}"
+      -PversionCode="${VERSION_CODE}"
+      --no-daemon
+  except:
+    - master
+    - dev
+  dependencies: []

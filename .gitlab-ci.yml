@@ -1,0 +1,26 @@
+variables:
+  PROJECT_NAME: $CI_PROJECT_TITLE
+  PROJECT_BRANCH_NAME: $CI_COMMIT_REF_NAME
+  MDS_PROJECTS_DIR: /home/mds/Projects/androidProjects
+  BUILD_TOOLS_VERSION: 33.0.0
+
+before_script:
+  - export VERSION_NAME="0.0.$CI_PIPELINE_IID"
+  - export PROJECT_NUMBER=$CI_PIPELINE_IID
+  - export VERSION_CODE=$PROJECT_NUMBER
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .gradle
+    - build-cache
+  policy: pull
+
+include:
+  - local: '/ci/.gitlab-ci-before.yml'
+  - local: '/ci/.gitlab-ci-check.yml'
+  - local: '/ci/.gitlab-ci-build.yml'
+
+stages:
+  - check
+  - build
