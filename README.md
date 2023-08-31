@@ -4,7 +4,6 @@
 <p align="center">
     <img src="screenshots/screen1.jpg" width="250"/>
     <img src="screenshots/screen2.jpg" width="250"/>
-    <img src="screenshots/screen3.jpg" width="250"/>
 </p>
 <br>
 
